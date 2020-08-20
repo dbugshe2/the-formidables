@@ -14,8 +14,13 @@ import {
   View,
   Text,
   StatusBar,
+  Modal,
+  TouchableOpacity,
+  ssImage,
+  FlatList,
 } from 'react-native';
-
+import LinearGradient from 'react-native-linear-gradient';
+import {enableScreens} from 'react-native-screens';
 import {
   Header,
   LearnMoreLinks,
@@ -23,6 +28,13 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+
+import * as Sentry from '@sentry/react-native';
+
+Sentry.init({
+  dsn:
+    'https://85a4a570d0934008a646b0c964506038@o326364.ingest.sentry.io/5397669',
+});
 
 const App: () => React$Node = () => {
   return (
